@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="images/ファビコン.webp">
+    <title>oAIba - みんなの最適な待ち合わせ場所</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHPERb3vK1utFnffrT-NKMx_D1mZB_t0w&libraries=places"></script>
+</head>
+<body>
+    <!-- 動的な背景 -->
+    <div class="background-animation"></div>
+
+    <!-- メインコンテンツ -->
+    <div class="main-container">
+        <!-- ヘッダー -->
+        <header class="card">
+            <h1 class="header-title"><a href="home.html" class="logo-link"><span style="font-weight: 700; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">oAIba</span></a></h1>
+            <p class="header-subtitle">みんなの最適な待ち合わせ場所を見つけます</p>
+        </header>
+
+        <!-- 入力フォーム -->
+        <section class="card" id="location-input-container">
+            <div class="location-form">
+                <input type="text" id="address-input" placeholder="🔍 住所または場所名を入力" class="input-field">
+                <select id="transport-mode" class="select-field">
+                    <option value="walking">🚶 徒歩</option>
+                    <option value="transit">🚃 電車</option>
+                    <option value="driving">🚗 車</option>
+                </select>
+                <button id="add-location" class="button">追加</button>
+            </div>
+            <div id="locations-list" class="locations-list"></div>
+        </section>
+
+        <!-- 地図表示エリア -->
+        <section class="card map-container" id="map-container"></section>
+
+        <!-- 提案表示エリア -->
+        <section class="card" id="places-list-container"></section>
+    </div>
+
+    <!-- スクリプト -->
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

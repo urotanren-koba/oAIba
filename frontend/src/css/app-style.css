@@ -1,0 +1,16 @@
+/* 既存のCSSの内容はそのままで、以下を追加 */
+
+/* ロゴリンク */
+.logo-link {
+    color: white;
+    text-decoration: none;
+    transition: all var(--transition-speed);
+    display: inline-block;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 残りのCSS内容... */
