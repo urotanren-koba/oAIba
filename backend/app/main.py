@@ -12,7 +12,7 @@ app = FastAPI(
 # CORSミドルウェアの設定
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.BACKEND_CORS_ORIGINS,
+    allow_origins=["*"],  # 本番環境では適切なオリジンに制限すべき
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -3,8 +3,8 @@ import { MapComponent } from './components/Map.js';
 import { LocationInput } from './components/LocationInput.js';
 import { SuggestionComponent } from './components/Suggestion.js';
 
-// バックエンドAPIのベースURL（開発環境用）
-const API_BASE_URL = 'http://localhost:8000';
+// バックエンドAPIのベースURL（Vercelのデプロイ先URL）
+const API_BASE_URL = 'https://o-aiba-backend.vercel.app';  // あなたのバックエンドのURLに変更してください
 
 // コンポーネントのグローバル参照
 let mapComponent;
@@ -118,6 +118,3 @@ function showError(message) {
 
 // グローバルスコープに公開（Google Maps callback用）
 window.initializeApp = initializeApp;
-
-// エクスポート（将来的な拡張のため）
-export { initializeApp };
